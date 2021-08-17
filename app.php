@@ -7,12 +7,14 @@ $age = 25; // yaş (sene)
 
 $guess = "1470"; // Tahmin edilen değer
 
+$guess = (int) $guess; // Cast to integer
+
 
 
 if($gender == "male"){ // Cinsiyetin erkek olması durumu
 
     $male_bmr = 88.362 + (13.397 * $weight) + (4.799 * $height) - (5.677 * $age); // bmr (male)
-
+    
     echo "BMR: " . $male_bmr ;
     echo "<br>";
 
@@ -23,7 +25,7 @@ if($gender == "male"){ // Cinsiyetin erkek olması durumu
     } else {
         echo "Tahmin değerinden büyük";
     }
-}else{ // Cinsiyetin kadın olması durumu
+} else { // Cinsiyetin kadın olması durumu
 
     $female_bmr = 447.593 + (9.247 * $weight) + (3.098 * $height) - (4.330 * $age); // bmr (female)
     
